@@ -1,0 +1,11 @@
+name: idr_env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - idr=2.0.4.2
+  - scipy=1.7
+  - numpy=1.21
+  - matplotlib
+  - python=3.10

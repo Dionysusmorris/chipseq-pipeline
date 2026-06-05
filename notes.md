@@ -1,4 +1,21 @@
 # -----------------------------------------------------------------------------
+#
+#
+# The pipeline currently requires two conda environments.
+#
+# chipseq_env:
+# - alignment
+# - QC
+# - peak calling
+#
+# idr_env:
+# - IDR reproducibility analysis
+#
+# The environments were separated because of dependency
+# conflicts between IDR and the primary ChIP-seq software stack.
+#
+#
+# -----------------------------------------------------------------------------
 # FUTURE OPTIMIZATION IDEA (NOT IMPLEMENTED)
 #
 # Goal:

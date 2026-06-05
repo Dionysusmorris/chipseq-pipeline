@@ -1,0 +1,33 @@
+# Raw sequencing data
+raw_data/
+
+# Generated outputs
+results/
+logs/
+
+# Alignment files
+*.bam
+*.bai
+
+# Peak files
+*.narrowPeak
+*.broadPeak
+
+# Coverage tracks
+*.bw
+*.bigwig
+*.bedgraph
+
+# Fastq
+*.fastq
+*.fastq.gz
+
+# QC reports
+*_fastqc.html
+*_fastqc.zip
+
+# Temporary files
+*.tmp
+
+# References
+reference_data/Mus_musculus/*

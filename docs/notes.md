@@ -1,5 +1,18 @@
+# git tag v0.1 
 # -----------------------------------------------------------------------------
 #
+# This hbc_chipseq project reflects an outdated project_startup script
+# This is old and needs to reflect local my startup script.
+#
+# mkdir logs meta raw_data reference_data results scripts envs docs workflow tests
+# 
+# is now
+# 
+# mkdir -p data/{raw,processed,reference} results/{qc,alignments,counts,de,figures,tables} meta 
+# mkdir -p scripts envs docs logs
+# touch README.md .gitignore git_startup.txt docs/notes.md
+#
+# -----------------------------------------------------------------------------
 #
 # The pipeline currently requires two conda environments.
 #
@@ -48,3 +61,6 @@
 # parallel ... prefetch ... fasterq-dump ... pigz ...
 #
 # -----------------------------------------------------------------------------
+# 
+# Large datasets, reference genomes, and analysis outputs are intentionally excluded from Git 
+# tracking and remain local to the compute environment.

@@ -1,8 +1,8 @@
-[PROJECT TITLE]
+ChIP-Seq Pipeline
 Author: Dionysus Morris-Evans
 
 
-This script is designed to ...
+This project is a more refined version of end-to-end analysis of ChIP-seq data. The workflow begins from FASTQ retrieval from GEO and ends with peak annotation, differential enrichment, peak visualization, and Over-Representation Analysis for Biological Functions & Pathways
 
 
 USAGE: bash example_script.sh [ARG1] [ARG2]
@@ -61,4 +61,4 @@ BUG REPORTS:
 - Inputs must exist otherwise the script will not execute successfully
 
 V0.0.0-beta
-YYYY-MM-DD
+2026-06-01

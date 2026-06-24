@@ -1,8 +1,14 @@
+# Currently working on differential enrichment portability script
+# Then motif analysis prep script
+# Lastly peak annotations on diff_peaks
+#
+#
+#
 # -----------------------------------------------------------------------------
 #
-# First review R scripts for portability issues
-# e.g. setwd() write.table() write.csv()
-# and any other incorrect paths in the scripts
+# Have to use multiple software tools to generate a QC report analagous to multiqc
+# or nf-core's chip-seq pipeline
+# not sure whether to recreate the qc report or use only multiqc report
 #
 # -----------------------------------------------------------------------------
 # git tag v0.1 

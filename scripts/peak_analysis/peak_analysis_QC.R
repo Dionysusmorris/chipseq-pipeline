@@ -2,17 +2,38 @@
 # Written by the Harvard Chan Bioinformatics Core on November 15th, 2024
 # This script was written as a demo for the Peak Analysis Workshop
 # In order to use this script, the user will need to have downloaded and uncompressed the R project from https://www.dropbox.com/scl/fi/s9mxwd7ttqgjt040m6bm2/Peak_analysis.zip?rlkey=ceqbv4pyx59jxsoa0xoh9l6kb&st=q7rlclil&dl=1
+# Derived by Dionysus Morris June 2026
+# MultiQC report should suffice for QC analysis 
+# This stage may be skipped
+
+# Example Run:
+# Rscript Peak_annotation.R \
+#   --peak_file peaks.bed \
+#   --output_dir results \
+#   --genome hg38
 
 # Load libraries
 library(tidyverse)
+library(optparse)
+library(bcbioR)
+
+# Input Argument Options
+option_list <- list(
+  make_option("--peak_file", type="character"),
+  make_option("--output_dir", type="character"),
+  make_option("--genome", type="character")
+)
+
+opt <- parse_args(OptionParser(option_list=option_list))
 
 # Load QC metrics file
 #metrics <- read.csv("meta/metrics.csv")
 #View(metrics)
 
-# Generate QC metrics file
-#path <- "C:/Users/Diony/Documents/Masters/RBIF109/Course Project/Peak_analysis/results/"
-#bcbio_templates(type="peakseq", outpath="C:/Users/Diony/Documents/Masters/RBIF109/Course Project/Peak_analysis/results")
+# Quick Harvard workflow for analysis from bcbio template.
+# bcbio_templates(type = "peakseq", outpath = output_dir)
+# metrics <- read.csv("meta/metrics.csv")
+# View(metrics)
 
 
 # Plot total reads

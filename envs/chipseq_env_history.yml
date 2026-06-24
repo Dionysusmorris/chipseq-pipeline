@@ -15,3 +15,6 @@ dependencies:
   - fastqc
   - pigz
   - homer
+  - Picard
+  - phantompeakqualtools
+  - bedGraphToBigWig 

@@ -2,8 +2,12 @@
 # Bioconductor version: 3.23
 # Generated on 2026-06-05
 
-install.packages("BiocManager")
 
+install.packages("BiocManager")
+install.packages("remotes")
+install.packages("optparse")
+
+remotes::install_github("bcbio/bcbioR")
 # CRAN packages
 
 install.packages("BiocManager")

@@ -33,4 +33,3 @@ parallel -j 4 --eta --bar '
 # Cleanup
 
 mv ../results/callpeaks/*.log ../logs/
-

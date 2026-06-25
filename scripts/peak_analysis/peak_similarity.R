@@ -332,6 +332,9 @@ suppressWarnings({ # Be careful to check objects based on the same reference gen
     connectedPeaks = "merge")
 })
 
+saveRDS(olaps_wt,
+        file.path(output_dir, "olaps_wt.rds")) # export for future use
+
 # class(olaps_wt) #validation check
 # names(olaps_wt) #validation check
 # colnames(olaps_wt$venn_cnt) #validation check and fighting the package

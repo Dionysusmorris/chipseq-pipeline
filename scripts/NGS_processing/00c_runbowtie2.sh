@@ -1,12 +1,14 @@
 #!/bin/bash
-#
 
 # GSE Accession Values: 
 # GEO: GSE111657, GSE111658, GSE111659, GSE111661
 # PRJNA: PRJNA437760
 
+# Set up directories for peak analysis via R
+
 cd ./results
 mkdir -p ./bam/sorted ./bed/ ./tmp/
+
 
 
 # ALIGN, CONVERT TO BINARY, FILTER, SORT

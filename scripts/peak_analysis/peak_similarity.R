@@ -99,8 +99,8 @@ pca_plot <- ggplot(plot_pca, aes(PC1, PC2, color = genotype, label = rownames(pl
   theme_bw() +
   geom_point() +
   geom_text_repel() +
-  xlab('PC1 (33% of variance)') +
-  ylab('PC2 (22% of variance)') +
+  xlab("PC1") +
+  ylab("PC2") +
   scale_x_continuous(expand = c(0.3,  0.3)) +
   theme(plot.title = element_text(size = rel(1.5)),
         axis.title = element_text(size = rel(1.5)),

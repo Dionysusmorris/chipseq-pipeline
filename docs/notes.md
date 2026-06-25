@@ -11,11 +11,16 @@
 # git tag v0.1 
 # -----------------------------------------------------------------------------
 #
-# This hbc_chipseq project reflects an updated project_startup.sh :
+# This hbc_chipseq project reflects an outdated project_startup script
+# This is old and needs to reflect local my startup script.
+#
+# mkdir logs meta raw_data reference_data results scripts envs docs workflow tests
 # 
-# mkdir -p data/{raw,processed,reference} results/{qc,bam/sorted,callpeaks/idr,bed,counts,de, \
-# figures,tables,tmp} meta scripts envs docs logs
-# touch README.md .gitignore git_startup.txt docs/notes.md docs/workflow.md
+# is now
+# 
+# mkdir -p data/{raw,processed,reference} results/{qc,alignments,counts,de,figures,tables} meta 
+# mkdir -p scripts envs docs logs
+# touch README.md .gitignore git_startup.txt docs/notes.md
 #
 # -----------------------------------------------------------------------------
 #
@@ -31,14 +36,7 @@
 #
 # The environments were separated because of dependency
 # conflicts between IDR and the primary ChIP-seq software stack.
-# 
-# Packages not yet installed on chipseq_env but are required
-# - homer
-# - Picard
-# - phantompeakqualtools
-# - bedGraphToBigWig 
-# 
-# R environment files are not up to date on the repo currently
+#
 #
 # -----------------------------------------------------------------------------
 # FUTURE OPTIMIZATION IDEA (NOT IMPLEMENTED)

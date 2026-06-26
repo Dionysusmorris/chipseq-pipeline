@@ -1,6 +1,18 @@
-#!/bin/bash
-# Taken from Harvard Bioinformatics Core 
-# Not yet functional
+#!/usr/bin/env bash
+
+# Containing of each script in the workflow
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
+source "${PROJECT_ROOT}/config/paths.sh"
+
+# GSE Accession Values: 
+# GEO: GSE111657, GSE111658, GSE111659, GSE111661
+# PRJNA: PRJNA437760
+
+
+## Taken from Harvard Bioinformatics Core ##
+## Not yet functional ##
 
 # # Arguments check, requires 3 arguments
 # if [ "$#" -ne 3 ]; then

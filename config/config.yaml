@@ -1,0 +1,16 @@
+# config/config.yaml
+# Working on a config file for the workflow
+
+# genome: hg38
+
+# reference:
+#   fasta: data/reference/genome/hg38.fa
+#   bowtie2: data/reference/bowtie2/hg38
+
+# threads: 8
+
+# alignment:
+#   mapq: 30
+
+# peak_calling:
+#   qvalue: 0.01

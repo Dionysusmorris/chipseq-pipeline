@@ -1,14 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# Containing of each script in the workflow
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
+source "${PROJECT_ROOT}/config/paths.sh"
 
 # GSE Accession Values: 
 # GEO: GSE111657, GSE111658, GSE111659, GSE111661
 # PRJNA: PRJNA437760
-
-# Set up directories for peak analysis via R
-
-cd ./results
-mkdir -p ./bam/sorted ./bed/ ./tmp/
-
 
 
 # ALIGN, CONVERT TO BINARY, FILTER, SORT
@@ -25,7 +25,7 @@ parallel -j 3 --joblog ../logs/alignment.log --eta --bar '
     2> ../logs/${name}.log \
   | samtools view -@ 2 -b -q 30 -F 260 - \
   | bedtools intersect -v -abam - -b ../reference_data/mm10-blacklist.v2.bed \
-  | samtools sort -@ 4 -m 4G -T ./tmp/${name}.tmp -o ./bam/sorted/${name}.sorted.bam - \
+  | samtools sort -@ 4 -m 4G -T ../tmp/${name}.tmp -o ./bam/sorted/${name}.sorted.bam - \
   && samtools index -@ 2 ./bam/sorted/${name}.sorted.bam;
 
   echo "${name} complete"
@@ -34,5 +34,5 @@ parallel -j 3 --joblog ../logs/alignment.log --eta --bar '
 # Duplicate Mapped Reads are not filtered here
 
 # Cleanup
-rm -r ./tmp
+rm -r ../tmp
 cd ../

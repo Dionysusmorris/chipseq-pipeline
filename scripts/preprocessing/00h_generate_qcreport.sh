@@ -1,5 +1,16 @@
-#!/bin/bash
-# Not yet functioning
+#!/usr/bin/env bash
+
+# Containing of each script in the workflow
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
+source "${PROJECT_ROOT}/config/paths.sh"
+
+# GSE Accession Values: 
+# GEO: GSE111657, GSE111658, GSE111659, GSE111661
+# PRJNA: PRJNA437760
+
+#### Not functional yet ####
 
 # # Run picard CollectAlignmentSummaryMetrics for a sample
 # java -jar picard.jar CollectAlignmentSummaryMetrics \
